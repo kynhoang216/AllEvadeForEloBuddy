@@ -330,11 +330,11 @@ namespace Evade
 
             var endPos = args.End.To2D();
 
-            if (spellData.SpellName == "LucianQ" && args.Target != null &&
+            /*if (spellData.SpellName == "LucianQ" && args.Target != null &&
                 args.Target.NetworkId == ObjectManager.Player.NetworkId)
             {
                 return;
-            }
+            }*/
 
             //Calculate the real end Point:
             var direction = (endPos - startPos).Normalized();

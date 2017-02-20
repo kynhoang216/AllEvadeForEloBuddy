@@ -648,6 +648,28 @@ namespace Evade
                 new SpellData
                 {
                     ChampionName = "Cassiopeia",
+                    SpellName = "CassiopeiaW",
+                    Slot = SpellSlot.W,
+                    Type = SkillShotType.SkillshotCircle,
+                    Delay = 0,
+                    Range = 850,
+                    Radius = 180,
+                    MissileSpeed = 3000,
+                    FixedRange = false,
+                    AddHitbox = true,
+                    DangerValue = 3,
+                    IsDangerous = false,
+                    MissileSpellName = "CassiopeiaWMissile",
+                    ExtraDuration = 5000,
+                    DontCross = true,
+                    CanBeRemoved = false,
+                    CollisionObjects = new[] { CollisionObjectTypes.YasuoWall }
+                });
+
+            Spells.Add(
+                new SpellData
+                {
+                    ChampionName = "Cassiopeia",
                     SpellName = "CassiopeiaR",
                     Slot = SpellSlot.R,
                     Type = SkillShotType.SkillshotCone,
@@ -1815,6 +1837,26 @@ namespace Evade
                 new SpellData
                 {
                     ChampionName = "Jinx",
+                    SpellName = "JinxE",
+                    Slot = SpellSlot.E,
+                    Type = SkillShotType.SkillshotLine,
+                    Delay = 350,
+                    Range = 850,
+                    Radius = 65,
+                    MissileSpeed = int.MaxValue,
+                    FixedRange = false,
+                    AddHitbox = true,
+                    DangerValue = 3,
+                    IsDangerous = false,
+                    MissileSpellName = "JinxEMissile",
+                    ExtraDuration = 5300,
+                    DontCross = true,
+                });
+
+            Spells.Add(
+                new SpellData
+                {
+                    ChampionName = "Jinx",
                     SpellName = "JinxR",
                     Slot = SpellSlot.R,
                     Type = SkillShotType.SkillshotMissileLine,
@@ -2628,6 +2670,26 @@ namespace Evade
                         new[]
                         {CollisionObjectTypes.Champions, CollisionObjectTypes.Minion, CollisionObjectTypes.YasuoWall},
                 });
+
+            Spells.Add(
+                 new SpellData
+                 {
+                     ChampionName = "Morgana",
+                     SpellName = "TormentedSoil",
+                     Slot = SpellSlot.W,
+                     Type = SkillShotType.SkillshotCircle,
+                     Delay = 50,
+                     Range = 1000,
+                     Radius = 275,
+                     MissileSpeed = int.MaxValue,
+                     FixedRange = false,
+                     AddHitbox = false,
+                     DangerValue = 2,
+                     IsDangerous = false,
+                     MissileSpellName = "",
+                     ExtraDuration = 5000,
+                     DontCross = true,
+                 });
 
             #endregion Morgana
 
@@ -4451,20 +4513,18 @@ namespace Evade
                 new SpellData
                 {
                     ChampionName = "Zyra",
-                    SpellName = "zyrapassivedeathmanager",
-                    Slot = SpellSlot.E,
-                    Type = SkillShotType.SkillshotMissileLine,
-                    Delay = 500,
-                    Range = 1474,
-                    Radius = 70,
-                    MissileSpeed = 2000,
-                    FixedRange = true,
+                    SpellName = "ZyraR",
+                    Slot = SpellSlot.R,
+                    Type = SkillShotType.SkillshotCircle,
+                    Delay = 2200,
+                    Range = 700,
+                    Radius = 520,
+                    MissileSpeed = int.MaxValue,
+                    FixedRange = false,
                     AddHitbox = true,
-                    DangerValue = 3,
+                    DangerValue = 5,
                     IsDangerous = true,
-                    MissileSpellName = "zyrapassivedeathmanager",
-                    EarlyEvade = new[] {EarlyObjects.Allies, EarlyObjects.Minions, EarlyObjects.AllyObjects},
-                    CollisionObjects = new[] {CollisionObjectTypes.YasuoWall},
+                    MissileSpellName = "",
                 });
 
             #endregion Zyra

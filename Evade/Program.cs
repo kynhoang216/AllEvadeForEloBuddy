@@ -350,6 +350,17 @@ namespace Evade
                         return;
                     }
 
+                    if (skillshot.SpellData.SpellName == "JinxE")
+                    {
+                        var start = skillshot.End - skillshot.Direction.Perpendicular() * 275;
+                        var end = skillshot.End + skillshot.Direction.Perpendicular() * 275;
+                        var skillshotToAdd = new Skillshot(
+                            skillshot.DetectionType, skillshot.SpellData, skillshot.StartTick, start, end,
+                            skillshot.Unit);
+                        DetectedSkillshots.Add(skillshotToAdd);
+                        return;
+                    }
+
                     if (skillshot.SpellData.SpellName == "DianaArc")
                     {
                         var skillshotToAdd = new Skillshot(
