@@ -301,10 +301,8 @@
         {
             var missile = sender as MissileClient;
 
-            if (missile == null || !missile.IsValid)
-            {
+            if (obj.GetType() != typeof(MissileClient) || !((MissileClient)obj).IsValidMissile())
                 return;
-            }
 
             var caster = missile.SpellCaster;
 
@@ -424,10 +422,8 @@
         {
             var missile = sender as MissileClient;
 
-            if (missile == null || !missile.IsValid)
-            {
+            if (obj.GetType() != typeof(MissileClient) || !((MissileClient)obj).IsValidMissile())
                 return;
-            }
 
             var caster = missile.SpellCaster;
 
